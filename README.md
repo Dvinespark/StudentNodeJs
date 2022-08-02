@@ -1,4 +1,10 @@
 # StudentNodeJs
 
 ## Mongoose Example
-### CRUD operation
+### CRUD operation Example
+
+
+###Requirements
+  - Node js
+  - Express js
+  - Mongoose
