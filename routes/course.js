@@ -22,7 +22,9 @@ router.get('/create', function (req, res, next) {
 router.post('/create', function (req, res, next) {
 	
 	courses.getNewId().then(data => {
-		req.body.id = data.id + 1;
+
+		console.log("***", data);
+		req.body.id = data ? data.id + 1 : 1;
 		courses.addCourse(req.body).then(result => {
 			res.redirect('/course');
 		});

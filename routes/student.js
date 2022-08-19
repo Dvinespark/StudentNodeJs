@@ -32,8 +32,7 @@ router.get('/create', function (req, res, next) {
 router.post('/create', function (req, res, next) {
 	
 	students.getNewId().then(data => {
-		console.log(data.id + 1);
-		req.body.id = data.id + 1;
+		req.body.id = data ? data.id + 1: 1;
 		students.addStudent(req.body).then(result => {
 			res.redirect('/student');
 		});
